@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div></div>
+      <div className="text-blue-600">NOTES App</div>
     </>
   );
 }
