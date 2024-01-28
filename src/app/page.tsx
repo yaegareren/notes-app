@@ -21,7 +21,8 @@ export default function Home() {
         </div>
         <p className="text-center max-w-prose">
           A modern notes application built using next.js, mongodb, tailwindcss
-          and clerk. <br /> It enables CRUD operations and supports dual theme.
+          and clerk. <br />
+          It enables CRUD operations and supports dual theme.
         </p>
         <Button size="lg" asChild>
           <Link href="/notes">Open</Link>
