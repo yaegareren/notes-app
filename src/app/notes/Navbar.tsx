@@ -8,9 +8,15 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import AddNoteDialog from "@/components/AddEditNoteDialog";
+import ThemeToggleButton from "@/components/ThemeToggleButton";
+import { dark } from "@clerk/themes";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
+  const { theme } = useTheme();
+
   const [showAddEditNoteDialog, setshowAddEditNoteDialog] = useState(false);
+
   return (
     <>
       <div className="p-4 shadow">
@@ -23,9 +29,11 @@ export default function Navbar() {
             <UserButton
               afterSignOutUrl="/"
               appearance={{
+                baseTheme: theme === "dark" ? dark : undefined,
                 elements: { avatarBox: { width: "2.5rem", height: "2.5rem" } },
               }}
             />
+            <ThemeToggleButton />
             <Button
               onClick={() => setshowAddEditNoteDialog(true)}
               variant="secondary"
