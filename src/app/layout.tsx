@@ -26,3 +26,5 @@ export default function RootLayout({
     </ClerkProvider>
   );
 }
+
+// openai ai @pinecone-database/pinecone
